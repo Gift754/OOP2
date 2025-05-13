@@ -1,11 +1,10 @@
-public class account{
-    public int accNo;
-    public String accName;
-    public double Balance;
+public class account {
+    protected int id;
+    protected String name;
+    private DataSource myData;
 
-    public void deposit(double amount){
-        Balance = Balance + amount;
+    public void performOperation(DataSource _myData) {
+        this.myData = _myData;
+        myData.execute();
     }
-
-    }
-
+}

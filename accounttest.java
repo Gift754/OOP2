@@ -1,12 +1,16 @@
 public class accounttest {
     public static void main(String[] args) {
-        account Giftaccount=new account();
-        Giftaccount.accNo=1423;
-        Giftaccount.accName= "Gift";
-        Giftaccount.Balance=80000;
+        Admin admin = new Admin(1, "Alice", "admin123");
+        User user = new User(2, "Bob");
 
-        System.out.println("A/c No: "+Giftaccount.accNo + " A/c Name: "+Giftaccount.accName + " Balance: "+Giftaccount.Balance);
+        DataSource update = new Update();
+        DataSource view = new View();
+        DataSource delete = new Delete();
 
+        System.out.println("Admin performs:");
+        admin.performOperation(update);  // Output: Executing update operation
+
+        System.out.println("User performs:");
+        user.performOperation(view);    // Output: Executing view operation
     }
-    
 }
