@@ -1,3 +1,4 @@
+//scanner
 import java.util.Scanner;
 public class Whiledemo {
     public static void main(String[] args) {
